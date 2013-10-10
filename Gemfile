@@ -32,8 +32,13 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+#Debugging
 gem "better_errors"
 gem "binding_of_caller"
+
+#Search
+gem 'mysql2',          '0.3.13'
+gem 'thinking-sphinx', '3.0.5'
 
 #Views
 gem "haml-rails"

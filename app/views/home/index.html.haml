@@ -6,6 +6,10 @@
 	= f.input :publishing_date
 	= f.submit class: "btn btn-success"
 	
+= simple_form_for String.new, url: root_path, method: :get do |f|
+	= f.input :search
+	= f.submit
+	
 %table.table.table-striped
 	%th Title
 	%th Author
