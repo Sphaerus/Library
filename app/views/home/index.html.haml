@@ -7,20 +7,10 @@
 	= f.submit class: "btn btn-success"
 	
 = simple_form_for String.new, url: root_path, method: :get do |f|
-	= f.input :search
-	= f.submit
+	= f.input_field :search, label: false, data: {role: "search-input"}, placeholder: "Search"
 	
 %table.table.table-striped
 	%th Title
 	%th Author
 	%th ISBN number
 	%th Publishing date
-	%th
-	
-	- @books.each do |book|
-		%tr
-			%td= book.title
-			%td= book.author
-			%td= book.isbn
-			%td= book.publishing_date
-			%td= link_to "Delete", book_path(book), method: :delete

@@ -5,8 +5,6 @@ class BooksController < ApplicationController
     respond_to do |format|
       if @book.save
         format.html {redirect_to root_path}
-      else
-        format.html {redirect_to root_path}
       end
     end      
   end   
