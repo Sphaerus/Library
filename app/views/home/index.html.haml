@@ -1,12 +1,22 @@
+
 = simple_form_for Book.new, url: books_path, method: :post do |f|
 	= f.input :title
 	= f.input :author
 	= f.input :isbn
 	= f.input :publishing_date
-	= f.submit class: "btn"
+	= f.submit class: "btn btn-success"
 	
-%table.table-striped
-	%th "Title"
-	%th "Author"
-	%th "ISBN number"
-	%th "Publishing date"
+%table.table.table-striped
+	%th Title
+	%th Author
+	%th ISBN number
+	%th Publishing date
+	%th
+	
+	- @books.each do |book|
+		%tr
+			%td= book.title
+			%td= book.author
+			%td= book.isbn
+			%td= book.publishing_date
+			%td= link_to "Delete", book_path(book), method: :delete

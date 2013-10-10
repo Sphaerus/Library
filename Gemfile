@@ -32,10 +32,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
-end
+gem "better_errors"
+gem "binding_of_caller"
 
 #Views
 gem "haml-rails"
