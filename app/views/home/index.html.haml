@@ -1,0 +1,6 @@
+= simple_form_for Book.new, url: books_path, method: :post do |f|
+	= f.input :title
+	= f.input :author
+	= f.input :isbn
+	= f.input :publishing_date
+	= f.submit
