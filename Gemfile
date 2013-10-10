@@ -32,6 +32,17 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
+#Views
+gem "haml-rails"
+
+#Forms
+gem "simple_form"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
