@@ -3,4 +3,10 @@
 	= f.input :author
 	= f.input :isbn
 	= f.input :publishing_date
-	= f.submit
+	= f.submit class: "btn"
+	
+%table.table-striped
+	%th "Title"
+	%th "Author"
+	%th "ISBN number"
+	%th "Publishing date"

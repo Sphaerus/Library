@@ -39,6 +39,7 @@ end
 
 #Views
 gem "haml-rails"
+gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
 
 #Forms
 gem "simple_form"
