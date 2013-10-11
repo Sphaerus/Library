@@ -1,12 +1,12 @@
 
-= simple_form_for Book.new, url: books_path, method: :post do |f|
-	= f.input :title
-	= f.input :author
-	= f.input :isbn
-	= f.input :publishing_date
+= simple_form_for :book, url: books_path, method: :post do |f|
+	= f.input :title, label: false, placeholder: "title"
+	= f.input :author, label: false, placeholder: "author"
+	= f.input :isbn, label: false, placeholder: "ISBN"
+	= f.input :publishing_date, label: false, placeholder: "publishing date"
 	= f.submit class: "btn btn-success"
 	
-= simple_form_for String.new, url: root_path, method: :get do |f|
+= simple_form_for String.new, url: root_path, method: :get, html: { autocomplete: 'off' } do |f|
 	= f.input_field :search, label: false, data: {role: "search-input"}, placeholder: "Search"
 	
 %table.table.table-striped
