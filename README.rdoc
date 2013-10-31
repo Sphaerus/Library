@@ -1,4 +1,4 @@
 == README
-EPI, bazy danych 2, projekt
+EPI, databases 2, project
 
-Wyszukiwarka zasobów
+Searching through books
