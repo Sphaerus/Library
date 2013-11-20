@@ -10,6 +10,7 @@ $(document).ready ->
 			data: { search: query }
 			success: (data)->
 				$("td").remove()
-				for book in data
-					htmlToInsert += "<tr><td>#{book.title}<td>#{book.author}<td>#{book.isbn}<td>#{book.publishing_date}<tr>"
+				if data != null
+					for book in data
+						htmlToInsert += "<tr><td>#{book.title}<td>#{book.author}<td>#{book.isbn}<td>#{book.publishing_date}<tr>"
 				$(".table").append(htmlToInsert)				 
