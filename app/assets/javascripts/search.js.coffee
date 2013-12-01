@@ -6,7 +6,7 @@ $(document).ready ->
 	insertComment = (htmlElement) ->
 		$(".comment-box").append(htmlElement)		
 		
-	$(".comment-box").append("<p>Wprowadź szukaną frazę</p>")
+	$(".comment-box").append("<p>Wprowadź szukaną frazę.</p>")
 			
 	$('[data-role="search-input"]').keyup ->
 		query = $(this).val()
@@ -27,7 +27,13 @@ $(document).ready ->
 				data: { search: query }
 				success: (data)->
 					removeGarbage()
-					if data != null
-						for book in data
-							htmlToInsert += "<tr class='removable'><td>#{book.title}<td>#{book.author}<td>#{book.isbn}<td>#{book.publishing_date}</tr>"
-					$(".table").append(htmlToInsert)
+					bookCount = 0
+					for book in data
+						bookCount++
+						htmlToInsert += "<tr class='removable'><td>#{book.title}<td>#{book.author}<td>#{book.isbn}<td>#{book.publishing_date}</tr>"
+					if bookCount == 0
+						removeGarbage()
+						htmlToInsert = "<p>Podana fraza nie została odnaleziona.</p>"
+						insertComment(htmlToInsert)	
+					else		
+						$(".table").append(htmlToInsert)
