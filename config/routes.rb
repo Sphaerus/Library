@@ -1,6 +1,6 @@
 Wyszukiwarka::Application.routes.draw do
 
-  resources :books, only: [:update, :create, :destroy]
+  resources :books, only: [:create]
   root 'home#index'
 
 end
