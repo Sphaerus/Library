@@ -1,0 +1,9 @@
+%h1= "Users"
+
+%table.table.table-striped
+	%th= "ID"
+	%th= "Email"
+	- @users.each do |user|
+		%tr
+			%td= user.id
+			%td= link_to user.email, edit_user_path(user)

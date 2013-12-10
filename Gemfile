@@ -46,6 +46,9 @@ gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
 #Forms
 gem "simple_form"
 
+#User authentication
+gem "devise"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
