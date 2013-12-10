@@ -1,0 +1,5 @@
+%h3= "Return books"
+= simple_form_for @rent_card, url: rent_card_return_books_path(@rent_card), method: :patch do |f|
+	= f.input :amount, label: false, placeholder: "How many copies?"
+	= f.input :book_id, input_html: { value: @book.id }, as: :hidden
+	= f.submit "Return"

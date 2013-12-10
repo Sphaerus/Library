@@ -46,6 +46,9 @@ gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
 #Forms
 gem "simple_form"
 
+#Authorization
+gem "pundit"
+
 #User authentication
 gem "devise"
 
