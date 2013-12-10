@@ -30,7 +30,7 @@ $(document).ready ->
 					bookCount = 0
 					for book in data
 						bookCount++
-						htmlToInsert += "<tr class='removable'><td>#{book.title}<td>#{book.author}<td>#{book.isbn}<td>#{book.publishing_date}</tr>"
+						htmlToInsert += "<tr class='removable'><td><a href='/books/#{book.id}'>#{book.title}<td>#{book.author}<td>#{book.isbn}<td>#{book.publishing_date}<td>#{book.amount}</tr>"
 					if bookCount == 0
 						removeGarbage()
 						htmlToInsert = "<p>Podana fraza nie została odnaleziona.</p>"

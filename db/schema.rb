@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20131208111445) do
     t.string   "isbn"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "amount"
   end
 
   create_table "users", force: true do |t|

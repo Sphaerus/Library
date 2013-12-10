@@ -1,0 +1,9 @@
+%h1= "My books"
+
+%table.table.table-striped
+	%th Title
+	%th How many you have
+	- @rent_cards.each do |rent_card|
+		%tr
+			%td= link_to rent_card.book.title, book_path(rent_card.book)
+			%td= rent_card.amount

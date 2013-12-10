@@ -1,0 +1,7 @@
+= simple_form_for @book do |f|
+	= f.input :title, label: false, placeholder: "title"
+	= f.input :author, label: false, placeholder: "author"
+	= f.input :isbn, label: false, placeholder: "ISBN"
+	= f.input :publishing_date, label: false, placeholder: "Publishing date"
+	= f.input :amount, label: false, placeholder: "Amount"
+	= f.submit class: "btn btn-success"

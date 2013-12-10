@@ -1,0 +1,17 @@
+%h1= "#{@book.title}"
+= render "admin_links"
+
+%p= "Author: #{@book.author}"
+%p= "ISBN: #{@book.isbn}"
+%p= "Publishing date: #{@book.publishing_date}"
+%p= "Amount: #{@book.amount}"
+
+- if @book.available?
+	= render "rent_form"
+- else
+	%p= "This book is unavailable for rent" 
+	
+- if current_user.has_book?(@book)	
+	= render "return_form"
+- else
+	= nil
