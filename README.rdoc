@@ -1,8 +1,6 @@
 == README
 EPI, databases 2, project
 
-Searching through books
-
 MANUAL
 
 Setting up Ruby&Rails
