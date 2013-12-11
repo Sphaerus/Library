@@ -2,3 +2,54 @@
 EPI, databases 2, project
 
 Searching through books
+
+MANUAL
+
+Setting up Ruby&Rails
+
+1. Install Ruby Version Manager 
+
+  https://rvm.io/
+
+2. Install Ruby 2.0
+
+  $ rvm install 2.0.0
+
+3. Set Ruby 2.0 as default Ruby version
+
+  $ rvm use 2.0.0
+  
+4. Install Ruby on Rails
+
+  $ gem install rails
+  
+Setting up application
+Inside application directory:
+
+1. Install all the necessary gems 
+
+  $ bundle install
+  
+2. Create database
+
+  $ rake db:create
+  
+3. Run migrations
+
+  $ rake db:migrate
+  
+4. Run seeds (for instant admin account)
+
+  $ rake db:seed
+  Admin account (login: example@example.com, password: secret111) will now be available
+  
+  
+4. Turn app on
+
+  $ rails s
+  Application will now be ready to use under "localhost:3000"
+  
+Enjoy!  
+
+  
+  
